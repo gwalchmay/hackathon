@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 function GridItem(props) {
-    console.log(props)
+    // console.log(props)
     const [itemPicUrl, setItemPicUrl] = useState("");
     const [itemPicAlt, setItemPicAlt] = useState("");
 

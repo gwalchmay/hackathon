@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import GridItem from './GridItem';
+import DisplayItem from './DisplayItem'
+import { BrowserRouter as Switch, Route, Link } from 'react-router-dom';
 
 
 class Grid extends Component {
@@ -9,7 +11,7 @@ class Grid extends Component {
         this.state = {
             items: []
         }
-        axios.get('https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=13&isHighlight=true&q=*')
+        axios.get('https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=6&isHighlight=true&q=*')
             // .then(response => console.log(response))
             .then(response => response.data)
             .then(data => {
@@ -23,9 +25,16 @@ class Grid extends Component {
             <div>
                 {this.state.items
                     .map((item) => (
-                        <GridItem item ={item} key={item} />
-                    ))}
+                        <Link to={`object/${item}`}>
+                            <GridItem item={item} key={item} />
+                        </Link>
+                    ))
+                }
+                <Switch>
+                    <Route path="/object/:itemId" component={DisplayItem} />
+                </Switch>
             </div>
+
         )
     }
 }
