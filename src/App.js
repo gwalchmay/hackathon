@@ -16,6 +16,7 @@ function App() {
           <Route path="/Home" component={() => <picturelist/>} />
           Travel through time and space from the comfort of your couch !
         </Switch>
+        <h2 className="title">Travel through time and space from the comfort of your couch !</h2>
         <div className="flexbox">
         <SimpleSelect />
         <ContainedButtons />

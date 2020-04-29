@@ -9,7 +9,7 @@ class NavBar extends React.Component{
                 <ul>
                     <li><Link to="/home">home</Link></li>
                 </ul>
-                <h1>Travel through time and space from the comfort of your couch !</h1>
+                <h1>Historical journey</h1>
             </nav>
         )
     }

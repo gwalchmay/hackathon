@@ -15,11 +15,16 @@ function ContainedButtons() {
   
     return (
       <div className={classes.root}>
-        <Button variant="contained" color="primary" href="#contained-buttons">
+        <Button variant="contained" color="primary" href="#contained-buttons" onClick="animationEffect()">
           Let's go
         </Button>
       </div>
     );
   }
+
+
+  // function animationEffect() {
+    
+  // }
 
 export default ContainedButtons;
