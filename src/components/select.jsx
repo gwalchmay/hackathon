@@ -46,7 +46,7 @@ function SimpleSelect() {
         </Select>
       </FormControl>
         <Button variant="contained" color="primary" href={`/period/${period}`}>
-          Let's go
+          Let's go!
         </Button>
     </div>
   );

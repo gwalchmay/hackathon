@@ -10,26 +10,28 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <NavBar />
-      <Switch>
-        <Route exact path="/" component={() => <Home />} />
-        <Route path="/Home" component={() => <Home />} />
-          Travel through time and space from the comfort of your couch !
-        <Route path="/period/:periodId" component={Grid} />
-        <Route path= "/object/:itemId" component={DisplayItem} />
-      </Switch>
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={() => <Home />} />
+          <Route path="/Home" component={() => <Home />} />
+          <Route path="/period/:periodId" component={Grid} />
+          <Route path="/object/:itemId" component={DisplayItem} />
+        </Switch>
       </Router>
     </div>
 
   );
 
-}
-function Home() {
-  return (
-    <div className="flexbox">
-      <SimpleSelect />
-    </div>
-  )
+  function Home() {
+    return (
+      <div>
+        <h2 className="title">Travel through time and space from the comfort of your couch !</h2>
+        <div className="flexbox">
+          <SimpleSelect />
+        </div>
+      </div>
+    )
+  }
 }
 
 export default App;
