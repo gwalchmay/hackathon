@@ -21,7 +21,7 @@ class Grid extends Component {
 
     render() {
         return (
-            <div>
+            <div className='grid'>
                 {this.state.items
                     .map((item) => (
                         <Link to={`/object/${item}`}>
