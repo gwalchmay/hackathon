@@ -1,4 +1,7 @@
 import React from 'react';
+import SimpleSelect from './components/select'
+import ContainedButtons from './components/input';
+import NavBar from './components/navbar';
 import './App.css';
 import Grid from './components/Grid';
 import DisplayItem from './components/DisplayItem';
@@ -6,33 +9,19 @@ import { BrowserRouter as Router, Switch, Route, Link,} from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/topics">Topics</Link>
-          </li>
-        </ul>
-
+    <div className="App">
+        <NavBar />
         <Switch>
-          <Route path="/topics">
-            <Grid />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/object/:itemId" component={DisplayItem} />
+          <Route exact path="/" component={() => <picturelist/>} />
+          <Route path="/Home" component={() => <picturelist/>} />
+          Travel through time and space from the comfort of your couch !
         </Switch>
-      </div>
-    </Router>
-  )
-}
-
-function Home() {
-  return <h2>Home</h2>;
+        <div className="flexbox">
+        <SimpleSelect />
+        <ContainedButtons />
+        </div>
+    </div>
+  );
 }
 
 export default App;
