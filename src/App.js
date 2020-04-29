@@ -1,27 +1,35 @@
 import React from 'react';
-import SimpleSelect from './components/select'
-import ContainedButtons from './components/input';
+import SimpleSelect from './components/select';
 import NavBar from './components/navbar';
 import './App.css';
 import Grid from './components/Grid';
 import DisplayItem from './components/DisplayItem';
-import { BrowserRouter as Router, Switch, Route, Link,} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link, } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-        <NavBar />
-        <Switch>
-          <Route exact path="/" component={() => <picturelist/>} />
-          <Route path="/Home" component={() => <picturelist/>} />
+      <Router>
+      <NavBar />
+      <Switch>
+        <Route exact path="/" component={() => <Home />} />
+        <Route path="/Home" component={() => <Home />} />
           Travel through time and space from the comfort of your couch !
-        </Switch>
-        <div className="flexbox">
-        <SimpleSelect />
-        <ContainedButtons />
-        </div>
+        <Route path="/period/:periodId" component={Grid} />
+        <Route path= "/object/:itemId" component={DisplayItem} />
+      </Switch>
+      </Router>
     </div>
+
   );
+
+}
+function Home() {
+  return (
+    <div className="flexbox">
+      <SimpleSelect />
+    </div>
+  )
 }
 
 export default App;
