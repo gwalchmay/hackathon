@@ -4,6 +4,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -18,10 +19,10 @@ const useStyles = makeStyles((theme) => ({
 
 function SimpleSelect() {
   const classes = useStyles();
-  const [age, setAge] = React.useState('');
+  const [period, setPeriod] = React.useState('');
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setPeriod(event.target.value);
   };
 
   return (
@@ -31,19 +32,22 @@ function SimpleSelect() {
         <Select
           labelId="demo-simple-select-outlined-label"
           id="demo-simple-select-outlined"
-          value={age}
+          value={period}
           onChange={handleChange}
-          label="Age"
+          label="Period"
         >
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
           <MenuItem value={10}>Ancient Egypt</MenuItem>
-          <MenuItem value={20}>European Paintings</MenuItem>
-          <MenuItem value={30}>Greek and Roman Antiquity</MenuItem>
-          <MenuItem value={40}>Asia</MenuItem>
+          <MenuItem value={11}>European Paintings</MenuItem>
+          <MenuItem value={13}>Greek and Roman Antiquity</MenuItem>
+          <MenuItem value={6}>Asia</MenuItem>
         </Select>
       </FormControl>
+        <Button variant="contained" color="primary" href={`/period/${period}`}>
+          Let's go
+        </Button>
     </div>
   );
 }
