@@ -1,38 +1,176 @@
-.App {
+body {
+  background-color: #F5ECDB;
+  font-family: 'Playfair Display', serif;
+}
+
+nav {
+  background-color: violet;
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  font-size: 30px;
+  list-style: none;
+}
+
+h1 {
+  margin-right: 5%;
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+  align-items: baseline;
+}
+
+#unique {
+  margin-left: 35%;
+  width: 400px;
+}
+
+.grid {
+  display: grid;
+  width: 100vw;
+  /*height: 100vw;*/
+  --cell-number: 10;
+  --cell-size: 10vw;
+  grid-template-columns: repeat(auto-fill, var(--cell-size));
+  z-index: 1;
+}
+
+.hiddenGrid {
+  display: none;
+  width: 100vw;
+  /*height: 100vw;*/
+  --cell-number: 10;
+  --cell-size: 10vw;
+  grid-template-columns: repeat(auto-fill, var(--cell-size));
+  z-index: 1;
+}
+
+.grid__item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /*overflow: hidden;*/
+  height: var(--cell-size);
+  /*outline: 1px solid rgba(0,0,0,0.87);*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.grid__item:hover{
+  opacity: 0.5;
+}
+
+
+.gridDisplay {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.displayPic {
+  width: auto;
+  height: 95vh;
+  justify-self: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  align-self: center;
+  justify-self: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title2 {
+  font-size: 2.5rem;
+  align-self: center;
+  justify-self: auto;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 375px) {
+  .grid {
+    display: grid;
+    width: 100vw;
+    /*height: 100vw;*/
+    --cell-number: 2;
+    --cell-size: 33vw;
+    grid-template-columns: repeat(auto-fill, var(--cell-size));
+    z-index: 1;
+  }
+  .gridDisplay {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .displayPic {
+    width: 100%;
+    height: auto;
+    justify-self: center;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Delorean {
+  width: 400px;
+  height: auto;
+  justify-self: center;
 }
 
-.App-link {
-  color: #61dafb;
+.lastGrid {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 376px) and (max-width: 769px) {
+  .grid {
+    display: grid;
+    width: 100vw;
+    /*height: 100vw;*/
+    --cell-number: 2;
+    --cell-size: 20vw;
+    grid-template-columns: repeat(auto-fill, var(--cell-size));
+    z-index: 1;
   }
-  to {
-    transform: rotate(360deg);
+  .gridDisplay {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .displayPic {
+    width: 100%;
+    height: auto;
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 770px) and (max-width: 1024px) {
+  .grid {
+    display: grid;
+    width: 100vw;
+    /*height: 100vw;*/
+    --cell-number: 2;
+    --cell-size: 14.28vw;
+    grid-template-columns: repeat(auto-fill, var(--cell-size));
+    z-index: 1;
   }
 }
