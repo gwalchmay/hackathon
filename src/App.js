@@ -4,7 +4,8 @@ import NavBar from './components/navbar';
 import './App.css';
 import Grid from './components/Grid';
 import DisplayItem from './components/DisplayItem';
-import { BrowserRouter as Router, Switch, Route, Link, } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
+import Illustration from './components/illustration';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/object/:itemId" component={DisplayItem} />
         </Switch>
       </Router>
+      <Illustration />
     </div>
 
   );
