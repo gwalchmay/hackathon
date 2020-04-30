@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+
 function GridItem(props) {
     // console.log(props)
     const [itemPicUrl, setItemPicUrl] = useState("");
@@ -15,7 +16,9 @@ function GridItem(props) {
         })
 
     return (
+        <div className='grid__item'>
         <img src={itemPicUrl} alt={itemPicAlt} />
+        </div>
     )
 }
 
