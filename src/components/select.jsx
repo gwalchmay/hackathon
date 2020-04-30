@@ -26,7 +26,7 @@ function SimpleSelect() {
   };
 
   return (
-    <div>
+        <div className="flexbox">
       <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel id="demo-simple-select-outlined-label">Choose your destination</InputLabel>
         <Select

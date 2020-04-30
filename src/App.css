@@ -32,6 +32,12 @@ h1 {
   display: flex;
   justify-content: center;
   margin-top: 4%;
+  align-items: baseline ;
+}
+
+#unique{
+  margin-left: 35%;
+  width: 400px;
 }
 
 .grid {
