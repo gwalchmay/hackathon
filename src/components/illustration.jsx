@@ -1,9 +1,11 @@
 import React from 'react';
-import Delorean from '../images/delorean.gif';
+import DeloreanFixe from  '../images/deloreanfixe.png';
 
-function Illustration() { 
+function Illustration(props) {
+    console.log(props)
+
     return(
-        <img id="unique" src={Delorean} alt="Logo" />
+        <img id="unique" src={DeloreanFixe} alt="Logo" />
     );
 };
 

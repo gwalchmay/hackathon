@@ -5,9 +5,10 @@ import './App.css';
 import Grid from './components/Grid';
 import DisplayItem from './components/DisplayItem';
 import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
-import Illustration from './components/illustration';
+import DeloreanFixe from  './images/deloreanfixe.png';
 
 function App() {
+
   return (
     <div className="App">
       <Router>
@@ -19,18 +20,16 @@ function App() {
           <Route path="/object/:itemId" component={DisplayItem} />
         </Switch>
       </Router>
-      <Illustration />
     </div>
 
   );
 
   function Home() {
     return (
-      <div>
+      <div className='lastGrid'>
         <h2 className="title">Travel through time and space from the comfort of your couch !</h2>
-        <div className="flexbox">
-          <SimpleSelect />
-        </div>
+        <SimpleSelect />
+        <img className='Delorean' src={DeloreanFixe} alt="Logo" />
       </div>
     )
   }

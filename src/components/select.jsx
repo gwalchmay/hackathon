@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles,} from '@material-ui/core/styles';
+import { makeStyles, } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function SimpleSelect() {
+function SimpleSelect(props) {
   const classes = useStyles();
   const [period, setPeriod] = React.useState('');
 
@@ -26,7 +26,7 @@ function SimpleSelect() {
   };
 
   return (
-        <div className="flexbox">
+    <div className="flexbox">
       <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel id="demo-simple-select-outlined-label">Choose your destination</InputLabel>
         <Select
@@ -45,8 +45,8 @@ function SimpleSelect() {
           <MenuItem value={6}>Asia</MenuItem>
         </Select>
       </FormControl>
-        <Button variant="contained" color="primary" href={`/period/${period}`}>
-          Let's go!
+      <Button variant="contained" color="primary" href={`/period/${period}`}>
+        Let's go!
         </Button>
     </div>
   );
