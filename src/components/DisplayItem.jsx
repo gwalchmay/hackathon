@@ -17,10 +17,10 @@ function DisplayItem(props) {
         })
 
     return (
-        <div>
-            <h3>{itemName}</h3>
-            <img src={itemPicUrl} alt={itemName} />
-            <h4>{itemDate}</h4>
+        <div className='gridDisplay'>
+            <h3 className='title'>{itemName}</h3>
+            <img src={itemPicUrl} alt={itemName} className="displayPic"/>
+            <h4 className='title2'>{itemDate}</h4>
         </div>
     )
 }
