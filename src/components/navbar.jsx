@@ -8,7 +8,7 @@ class NavBar extends React.Component{
         return(
             <nav>  
                 <ul>
-                    <li><Link to="/home"><img src={home} style={{width: 40}}/></Link></li>
+                    <li><Link to="/home"><img src={home} alt={'Home symbol'} style={{width: 40}}/></Link></li>
                 </ul>
                 <h1>Historical Journey</h1>
             </nav>

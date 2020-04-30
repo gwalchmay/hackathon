@@ -32,16 +32,26 @@ h1 {
   display: flex;
   justify-content: center;
   margin-top: 4%;
-  align-items: baseline ;
+  align-items: baseline;
 }
 
-#unique{
+#unique {
   margin-left: 35%;
   width: 400px;
 }
 
 .grid {
   display: grid;
+  width: 100vw;
+  /*height: 100vw;*/
+  --cell-number: 10;
+  --cell-size: 10vw;
+  grid-template-columns: repeat(auto-fill, var(--cell-size));
+  z-index: 1;
+}
+
+.hiddenGrid {
+  display: none;
   width: 100vw;
   /*height: 100vw;*/
   --cell-number: 10;
@@ -59,7 +69,16 @@ h1 {
   /*outline: 1px solid rgba(0,0,0,0.87);*/
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
 }
+
+.grid__item:hover{
+  opacity: 0.5;
+}
+
 
 .gridDisplay {
   display: grid;
@@ -110,6 +129,17 @@ img {
     height: auto;
     justify-self: center;
   }
+}
+
+.Delorean {
+  width: 400px;
+  height: auto;
+  justify-self: center;
+}
+
+.lastGrid {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 @media screen and (min-width: 376px) and (max-width: 769px) {
