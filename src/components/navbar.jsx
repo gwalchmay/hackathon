@@ -10,7 +10,7 @@ class NavBar extends React.Component{
                 <ul>
                     <li><Link to="/home"><img src={home} style={{width: 40}}/></Link></li>
                 </ul>
-                <h1>Historical journey</h1>
+                <h1>Historical Journey</h1>
             </nav>
         )
     }

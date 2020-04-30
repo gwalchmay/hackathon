@@ -15,7 +15,9 @@ class Grid extends Component {
             // .then(response => console.log(response))
             .then(response => response.data)
             .then(data => {
-                this.setState({ items: [...this.state.items, ...data.objectIDs] });
+                const shortArray = data.objectIDs.slice(0, 50);
+                console.log(shortArray)
+                this.setState({ items: [...this.state.items, ...shortArray] });
             })
     }
 
