@@ -13,8 +13,9 @@ class Grid extends Component {
             items: [],
             displayingGrid: false
         }
-        console.log(props)
-        axios.get(`https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=${props.match.params.periodId}&isHighlight=true&q=*`)
+    }
+    componentDidMount() {
+        axios.get(`https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=${this.props.match.params.periodId}&isHighlight=true&q=*`)
             // .then(response => console.log(response))
             .then(response => response.data)
             .then(data => {
